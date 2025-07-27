@@ -1,7 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import WordBank from './components/WordBank.vue';
-import WordCard from './components/WordCard.vue';
+import { ref } from 'vue'
+import WordBank from './components/WordBank.vue'
+import WordCard from './components/WordCard.vue'
+import Button from './components/Button.vue'
+import Button2 from './components/Button2.vue'
+import Button3 from './components/Button3.vue'
+import RoadPath from './components/RoadPath.vue'
+
+
+
+
 
 const beta = ref(false)
 
@@ -9,7 +17,7 @@ const beta = ref(false)
 
 <template>
   <WordBank />
-  <!-- <div class="h-screen flex justify-center items-center gap-20">
+  <div class="h-screen flex justify-center items-center gap-20">
     <WordCard @word-card-click="beta = !beta" :is-correct="beta" posi="right">
       <template #kana>
         にほん
@@ -27,6 +35,11 @@ const beta = ref(false)
         日本
       </template>
     </WordCard>
-  </div> -->
+
+    <Button btn-content="跳过" />
+    <Button2 btn2-content="检查" />
+    <Button3 btn3-content="继续" />
+    <RoadPath :is-finished="false" />
+  </div>
 
 </template>

@@ -1,8 +1,8 @@
 <!-- WordCard.vue -->
 <script setup lang="ts">
-import { computed, ref, Transition, watch } from 'vue';
-import Celebrate from './icons/Celebrate.vue';
-import Celebrate2 from './icons/Celebrate2.vue';
+import { computed, ref, Transition, watch } from 'vue'
+import Celebrate from './icons/Celebrate.vue'
+import Celebrate2 from './icons/Celebrate2.vue'
 
 type Posi = 'left' | 'right'
 
@@ -89,7 +89,7 @@ watch(() => isCorrect, (newVal) => {
             class="font-mono flex justify-center items-center border-2 rounded-lg px-2 shadow-none transition-all duration-300">
             {{ num }}
         </span>
-        <div class="flex flex-col">
+        <div class="flex flex-col justify-center items-center">
             <span v-if="$slots.kana" class="text-[#AFAFAF] text-sm leading-3">
                 <slot name="kana" />
             </span>
